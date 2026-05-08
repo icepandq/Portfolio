@@ -23,10 +23,10 @@ body{
 }
 .line{
     position: absolute;
-    margin-left: -1vh;
+    margin-left: 4vh;
     margin-top: -1vh;
     height: 100vh;
-    width: 12vh;
+    width: 2vh;
     background-color: rgb(32, 32, 32);
     z-index: 0;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
@@ -46,6 +46,7 @@ svg{
     border: none;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     padding-top: .5vh;
+    cursor: pointer;
     
      transition: .3s ease-in-out;
 }
@@ -119,22 +120,23 @@ span{
 .ld-btn{
     position: absolute;
     margin-left: 20vh;
-    margin-top: 65vh;
-    padding: 3vh 5vh;
+    margin-top: 63vh;
+    padding: 2vh 5vh;
     border-radius: 50px;
     color: white;
     background-color: transparent;
     border: 1.5px solid white;
-    font-family: 'Linden Hill', serif;
+    font-family: 'HarmonyOS Sans', sans-serif;
     font-weight: 500;
     font-size: 2vh;
+    cursor: pointer;
 
     transition: .5s ease-in-out;
 }
 .ld-btn:hover{
     background-color: yellow;
     color: black;
-    border-color: black;
+    border-color: yellow;
 }
 .txt-box1{
     display: flex;
@@ -253,6 +255,7 @@ Section 2
     border-radius: 50px;
     border-color: rgba(255, 255, 0, 0.471);
     padding: 2vh 4vw;
+    cursor: pointer;
 
     transition: .5s ease-in-out;
     
@@ -260,6 +263,7 @@ Section 2
 .exp-btn:hover{
     background-color: yellow;
     color: black;
+    transform: scale(1.1);
 }
 .tech{
     display: flex;
@@ -321,7 +325,7 @@ Section 2
     color: rgba(255, 255, 255, 0.732);
 }
 .top-label div{
-    margin-top: 2vh;
+    margin-top: -2vh;
     margin-left: 17.4vh;
     border-radius: 50vh;
     background-color: rgba(255, 255, 0, 0.603);
@@ -340,7 +344,7 @@ Section 2
     color: rgba(255, 255, 255, 0.684);
 }
 .txt-left div{
-    margin-top: 2vh;
+    margin-top: -2vh;
     margin-left: 3vh;
     border-radius: 50vh;
     background-color: rgba(255, 255, 0, 0.603);
@@ -362,7 +366,7 @@ Section 2
     margin-left: 1vh;
 }
 .txt-right div{
-    margin-top: 2vh;
+    margin-top: -2vh;
     margin-left: 3vh;
     border-radius: 50vh;
     background-color: rgba(255, 255, 0, 0.603);
@@ -381,9 +385,9 @@ GENERAL BULLET POINT
     border-radius: 100px;
     height: 1vh;
     width: 1vh;
-    margin-left: 20vw;
+    margin-left: 17.5vw;
     margin-top: 7vh;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.692);
 }
 /*====================================================================
 Section 3
@@ -403,38 +407,137 @@ Section 3
     -webkit-mask-image:linear-gradient(to top, #000 60%, transparent 100%);
     mask-image: linear-gradient(to top, #000 60%, transparent 100%);
 }
+/*============================================================================*/
 .Project{
     display: flex;
     position: absolute;
-    font-family: 'Linden Hill', serif;
-    font-size: 50px;
-    margin-top: 4vh;
-    margin-left: 6vw;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    font-size: 2vh;
+    font-weight: 500;
+    margin-top: 6vh;
+    margin-left: 10vw;
+    background-color: yellow;
+    color: black;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: .2vh;
 }
 .Featured{
     display: flex;
     position: absolute;
-    font-family: 'Linden Hill', serif;
-    font-size: 20px;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    font-size: 2vh;
     margin-top: 6vh;
-    margin-left: 22vw;
+    margin-left: 19vw;
+    color: rgba(255, 255, 255, 0.708);
+}
+.large{
+    display: flex;
+    position: absolute;
+    overflow: hidden;
+    background-color: yellow;
+    border-radius: 1vh;
+    height: 50vh;
+    width: 49vw;
+    margin-left: 43vw;
+    margin-top: 12vh;
+}
+.box div{
+    display: flex;
+    background-color: aqua;
+    overflow: hidden;
+    border-radius: 1vh;
+    height: 19vh;
+    width: 30vh;
+    margin-top: 75vh;
+}
+.box {
+    display: flex;
+    gap: 3vh;
+    margin-left: 43vw;
+}
+.ak-title{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    font-size: 10vh;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    
+}
+.ed{
+    background-color: yellow;
+    color: black;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    border-radius: 1vh;
+}
+.main-txt{
+    display: flex;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.655);
+    font-family: 'HarmonyOS Sans', sans-serif;
+    margin-left: 10vw;
+    margin-top: 48vh;
+    font-size: 1.8vh;
+}
+.sec-txt{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 1vh;
+    margin-left: 10vw;
+    margin-top: 40vh;
+    font-family: 'HarmonyOS Sans', sans-serif;
+}
+.sec-txt div{
+    background-color: yellow;
+    height: .2vh;
+    width: 3vw;
+}
+.view-btn{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: -34vh;
+    opacity: 90%;
+    background-color: transparent;
+    border-radius: 10vh;
+    border: .2vh solid yellow;
+    padding: 1vh;
+    padding: 1vh 4vh;
+    cursor: pointer;
+
+    transition: .5s ease-in-out;
+    
+}
+.view-btn svg {
+    height: auto;
+    width: 3vh;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: .5s ease-in-out;
+}
+.view-btn span{
+    margin-top: .5vh;
+
+    transition: .5s ease-in-out;
+}
+.view-btn:hover span{
+    color: black;
+}
+.view-btn:hover{
+    transform: scale(1.1);
+    background-color: yellow;
+}
+.view-btn:hover svg{
+    transform: scale(1.1);
+    fill: black;
+    background-color: transparent;
 }
 /*====================================================================
 Section 4
 ======================================================================*/
-.Project_two{
-    display: flex;
-    position: absolute;
-    font-family: 'Linden Hill', serif;
-    font-size: 50px;
-    margin-top: 4vh;
-    margin-left: 6vw;
-}
-.Featured_two{
-    display: flex;
-    position: absolute;
-    font-family: 'Linden Hill', serif;
-    font-size: 20px;
-    margin-top: 6vh;
-    margin-left: 22vw;
-}
