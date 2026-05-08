@@ -1,0 +1,440 @@
+/*====================================================================
+NAVBAR
+======================================================================*/
+@import url('https://googleapis.com');
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body{
+    background-color: rgb(25, 25, 25);
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    height: 100vh;
+    width: 10vh;
+    background-color: rgba(255, 255, 255, 0);
+}
+.line{
+    position: absolute;
+    margin-left: -1vh;
+    margin-top: -1vh;
+    height: 100vh;
+    width: 12vh;
+    background-color: rgb(32, 32, 32);
+    z-index: 0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+svg{
+    color: white;
+    transition: .5s ease-in-out;
+}
+.icon{
+    position: relative;
+    height: 5vh;
+    width: 5vh;
+    margin-left: 19.2px;
+    z-index: 1;
+    background-color: rgba(50, 50, 50, 0.558);
+    border-radius: 20%;
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    padding-top: .5vh;
+    
+     transition: .3s ease-in-out;
+}
+.nav-elements{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4vh;
+    margin-top: 25vh;
+    position: relative; /* add this */
+    z-index: 2;
+}
+.icon:hover {
+    background-color: rgb(255, 255, 0);
+    transform: scale(1.1);
+}
+.icon:hover svg{
+    color: black;
+}
+.icon.active-btn{
+    background-color: rgb(255, 255, 0);
+}
+.icon.active-btn svg{
+    color: black;
+}
+.navbar a.active-btn button {
+    background-color: rgb(255, 255, 0);
+    color: black;
+}
+
+.navbar a.active-btn svg {
+    color: black;
+}
+
+
+/*====================================================================
+Section 1
+======================================================================*/
+span{
+    color: white;
+}
+.landing-page{
+    font-family: 'Linden Hill', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    margin-left: 20vh;
+    margin-top: 19vh;
+    font-size: 10vh;
+    z-index: 1;
+}
+.web{
+    color: black;
+}
+.under-text{
+    position: absolute;
+    margin-left: 20vh;
+    margin-top: 55vh;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    opacity: 70%;
+}
+.text-line{
+    background-color: rgba(255, 255, 255, 0.271);
+    position: absolute;
+    height: .3vh;
+    width: 32vw;
+    margin-left: 20vh;
+    margin-top: 58vh;
+}
+.ld-btn{
+    position: absolute;
+    margin-left: 20vh;
+    margin-top: 65vh;
+    padding: 3vh 5vh;
+    border-radius: 50px;
+    color: white;
+    background-color: transparent;
+    border: 1.5px solid white;
+    font-family: 'Linden Hill', serif;
+    font-weight: 500;
+    font-size: 2vh;
+
+    transition: .5s ease-in-out;
+}
+.ld-btn:hover{
+    background-color: yellow;
+    color: black;
+    border-color: black;
+}
+.txt-box1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 10vh;
+    width: 10vw;
+    margin-left: 10vw;
+    margin-top: 43vh;
+    background-color: white;
+    border-radius: 5px;
+    z-index: 0;
+}
+.txt-box2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    height: 10vh;
+    width: 21.8vw;
+    margin-left: 20.5vw;
+    margin-top: 43vh;
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+
+
+
+/*====================================================================
+Section 2
+======================================================================*/
+#skills {
+    margin-left: 2vw;
+}
+.s2-elements{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  
+}
+.ring1, .ring2, .gwapo{
+    margin-left: 4vw;
+}
+.ring1 {
+    position: absolute;
+    height: 47vh;
+    width: 47vh;
+    border: 2px solid rgba(255, 255, 0, 0.603);
+    border-radius: 50%;
+    z-index: 2;
+
+    -webkit-mask-image:linear-gradient(to bottom, #000 5%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 5%, transparent 100%);
+
+    
+}
+.ring2 {
+    position: absolute;
+    height: 70vh;
+    width: 70vh;
+    background-color: rgb(31, 31, 31);
+    border-radius: 50%;
+    z-index: 1;
+    border-color: aliceblue;
+    box-shadow: 0px -1px 30px rgba(255, 255, 255, 0.3);
+
+    -webkit-mask-image:linear-gradient(to bottom, #000 5%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 5%, transparent 100%);
+}
+.gwapo{
+    position: absolute;
+    margin-top: 15vh;
+    z-index: 4;
+    
+}
+.tools{
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 120px;
+    margin-right: 55vw;
+    margin-bottom: 35vh;
+}
+.skills{
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 120px;
+    margin-left: 62vw;
+    margin-bottom: 35vh;
+}
+.arw svg{
+    height: auto;
+    width: 3vh;
+}
+.arw{
+    position: absolute;
+    margin-top: 30vh;
+    margin-top: 92vh;
+    margin-left: 5vw;
+    z-index: 7;
+}
+.explore-btn{
+    position: absolute;
+    margin-top: 30vh;
+    margin-top: 78vh;
+    margin-left: 5vw;
+    z-index: 7;
+}
+.exp-btn{
+    background-color: transparent;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    color: white;
+    border-radius: 50px;
+    border-color: rgba(255, 255, 0, 0.471);
+    padding: 2vh 4vw;
+
+    transition: .5s ease-in-out;
+    
+}
+.exp-btn:hover{
+    background-color: yellow;
+    color: black;
+}
+.tech{
+    display: flex;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    margin-top: 70vh;
+    margin-left: 8vw;
+    gap: 2vw;
+    z-index: 6;
+}
+.skls{
+    display: flex;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    margin-top: 70vh;
+    margin-left: 63.5vw;
+    gap: 2vw;
+    z-index: 6;
+}
+
+.figma, .vscode, .notion, .github, .ui, .webdev, .pb, .comms {
+    font-family: 'HarmonyOS Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 14vh;
+    width: 10vh;
+    border-radius: 10px;
+    border: .1vh solid rgba(255, 255, 255, 0.2);
+    background-color: rgb(35, 35, 35);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.fm, .vs, .no, .gh, .u, .we, .ps, .co {
+    font-size: 1.5vh;
+    margin-top: 2vh;
+    color: rgba(255, 255, 255, 0.564);
+}
+.tech svg{
+     height: auto;
+    width: 5vh;
+}
+.skls svg{
+     height: auto;
+    width: 5vh;
+}
+.top-label{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    margin-left: 78vw;
+    margin-top: 5vh;
+}
+.top-label span{
+    font-size: 1.5vh;
+    color: rgba(255, 255, 255, 0.732);
+}
+.top-label div{
+    margin-top: 2vh;
+    margin-left: 17.4vh;
+    border-radius: 50vh;
+    background-color: rgba(255, 255, 0, 0.603);
+    height: .2vh;
+    width: 10vh;
+}
+.txt-left{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    margin-left: 16.5vw;
+    margin-top: 45vh;
+}
+.txt-left span{
+    color: rgba(255, 255, 255, 0.684);
+}
+.txt-left div{
+    margin-top: 2vh;
+    margin-left: 3vh;
+    border-radius: 50vh;
+    background-color: rgba(255, 255, 0, 0.603);
+    height: .2vh;
+    width: 10vh;
+}
+.txt-right{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    margin-left: 75vw;
+    margin-top: 45vh;
+}
+.txt-right span{
+    color: rgba(255, 255, 255, 0.684);
+}
+.line-1{
+    margin-left: 1vh;
+}
+.txt-right div{
+    margin-top: 2vh;
+    margin-left: 3vh;
+    border-radius: 50vh;
+    background-color: rgba(255, 255, 0, 0.603);
+    height: .2vh;
+    width: 10vh;
+}
+
+
+
+/*====================================================================
+GENERAL BULLET POINT
+======================================================================*/
+.bullet{
+    display: flex;
+    position: absolute;
+    border-radius: 100px;
+    height: 1vh;
+    width: 1vh;
+    margin-left: 20vw;
+    margin-top: 7vh;
+    background-color: white;
+}
+/*====================================================================
+Section 3
+======================================================================*/
+.cover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 30vh;
+    width: 70vw;
+    margin-left: 30vw;
+    margin-top: -28vh;
+    background-color: rgb(25, 25, 25);
+    z-index: 5;
+
+    -webkit-mask-image:linear-gradient(to top, #000 60%, transparent 100%);
+    mask-image: linear-gradient(to top, #000 60%, transparent 100%);
+}
+.Project{
+    display: flex;
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 50px;
+    margin-top: 4vh;
+    margin-left: 6vw;
+}
+.Featured{
+    display: flex;
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 20px;
+    margin-top: 6vh;
+    margin-left: 22vw;
+}
+/*====================================================================
+Section 4
+======================================================================*/
+.Project_two{
+    display: flex;
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 50px;
+    margin-top: 4vh;
+    margin-left: 6vw;
+}
+.Featured_two{
+    display: flex;
+    position: absolute;
+    font-family: 'Linden Hill', serif;
+    font-size: 20px;
+    margin-top: 6vh;
+    margin-left: 22vw;
+}
