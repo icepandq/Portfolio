@@ -134,7 +134,7 @@ p{
     font-size: 2vh;
     cursor: pointer;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .ld-btn:hover{
     background-color: yellow;
@@ -261,7 +261,7 @@ Section 2
     padding: 2vh 4vw;
     cursor: pointer;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     
 }
 .exp-btn:hover{
@@ -512,7 +512,7 @@ Project 1 and PRoject 2 Page
     padding: 1vh 4vh;
     cursor: pointer;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     
 }
 .view-btn svg {
@@ -523,12 +523,12 @@ Project 1 and PRoject 2 Page
     justify-content: center;
     align-items: center;
     
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out
 }
 .view-btn span{
     margin-top: .5vh;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .view-btn:hover span{
     color: black;
@@ -555,7 +555,7 @@ Project 1 and PRoject 2 Page
     padding: 1vh 4vh;
     cursor: pointer;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
     
 }
 .view-btn2 svg {
@@ -566,12 +566,12 @@ Project 1 and PRoject 2 Page
     justify-content: center;
     align-items: center;
     
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .view-btn2 span{
     margin-top: .5vh;
 
-    transition: .5s ease-in-out;
+    transition: .2s ease-in-out;
 }
 .view-btn2:hover span{
     color: black;
@@ -652,5 +652,59 @@ Project 1 and PRoject 2 Page
 /*====================================================================
 Contact Page
 ======================================================================*/
+.contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+    gap: 5vh;
+}
+.contacts span {
+    font-size: 13vh;
+    color: white;
+}
+.contacts button{
+    font-size: 5vh;
+    background-color: transparent;
+    color: white;
+    border-radius: 10vh;
+    padding: 1vh 3vh;
+    border-color: white;
+    font-family: 'Linden Hill', serif;
+    cursor: pointer;
 
+    transition: .2s ease-in-out;
+}
+.contacts button:hover{
+    color: black;
+    background-color: yellow;
+    transform: scale(1.1);
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(30, 30, 30);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    font-size: 1.7vh;
+}
 
+footer div {
+    display: flex;
+    margin-top: 1vh;
+    gap: 3vh;
+}
+footer svg {
+    fill: white;
+    height: auto;
+    width: 4vh;
+
+    transition: .2s ease-in-out;
+}
+footer svg:hover{
+    transform: scale(1.1);
+}
