@@ -299,13 +299,15 @@
     // Restore button hover transition after animation
     if (el.classList.contains('ld-btn')) {
       setTimeout(() => {
-        el.style.transition = `
-          background-color 0.5s ease-in-out,
-          color 0.5s ease-in-out,
-          border-color 0.5s ease-in-out
-        `;
-      }, delay + 60 + 900);
-    }
+      // ADJUST: add/remove properties and durations as needed
+      el.style.transition = `
+      background-color 0.5s ease-in-out,
+      color 0.5s ease-in-out,
+      border-color 0.5s ease-in-out,
+      transform 0.5s ease-in-out
+    `;
+  }, delay + 60 + 900);
+}
   });
 
   // ═══════════════════════════════════════════════════════

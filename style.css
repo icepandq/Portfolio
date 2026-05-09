@@ -83,9 +83,12 @@ svg{
 
 
 /*====================================================================
-Section 1
+Landing Page
 ======================================================================*/
 span{
+    color: white;
+}
+p{
     color: white;
 }
 .landing-page{
@@ -137,6 +140,7 @@ span{
     background-color: yellow;
     color: black;
     border-color: yellow;
+    transform: scale(1.1);
 }
 .txt-box1{
     display: flex;
@@ -390,7 +394,7 @@ GENERAL BULLET POINT
     background-color: rgba(255, 255, 255, 0.692);
 }
 /*====================================================================
-Section 3
+Project 1 and PRoject 2 Page
 ======================================================================*/
 .cover{
     display: flex;
@@ -456,7 +460,7 @@ Section 3
     gap: 3vh;
     margin-left: 43vw;
 }
-.ak-title{
+.pj-title{
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -465,7 +469,7 @@ Section 3
     margin-top: 15vh;
     
 }
-.ed{
+.secondary{
     background-color: yellow;
     color: black;
     padding-left: 1vh;
@@ -538,6 +542,115 @@ Section 3
     fill: black;
     background-color: transparent;
 }
+.view-btn2{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: -34vh;
+    opacity: 90%;
+    background-color: transparent;
+    border-radius: 10vh;
+    border: .2vh solid yellow;
+    padding: 1vh;
+    padding: 1vh 4vh;
+    cursor: pointer;
+
+    transition: .5s ease-in-out;
+    
+}
+.view-btn2 svg {
+    height: auto;
+    width: 3vh;
+    margin-left: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: .5s ease-in-out;
+}
+.view-btn2 span{
+    margin-top: .5vh;
+
+    transition: .5s ease-in-out;
+}
+.view-btn2:hover span{
+    color: black;
+}
+.view-btn2:hover{
+    transform: scale(1.1);
+    background-color: yellow;
+}
+.view-btn2:hover svg{
+    transform: scale(1.1);
+    fill: black;
+    background-color: transparent;
+}
+.separator{
+    display: flex;
+    position: absolute;
+    height: .1vh;
+    width: 82vw;
+    background-color: rgba(255, 255, 255, 0.273);
+    margin-left: 10vw;
+    margin-top: 68.5vh;
+
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.third-txt{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 70vh;
+    gap: 24.7vw;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    font-size: 1.7vh;
+}
+.third-lines{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 73vh;
+    gap: 30.5vw;
+}
+.third-lines div{
+    height: .2vh;
+    width: 5vh;
+    background-color: yellow;
+}
+.fourth-txt{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 75vh;
+    font-size: 1.7vh;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    color:rgba(255, 255, 255, 0.619);
+}
+.fifth-txt{
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 87vh;
+    gap: 17vw;
+    font-size: 1.7vh;
+    font-family: 'HarmonyOS Sans', sans-serif;
+    
+}
+.fifth-txt2 {
+    display: flex;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 90vh;
+    gap: 10vw;
+    font-size: 1.7vh;
+    font-family: 'HarmonyOS Sans', sans-serif;
+}
+.fifth-txt2 span {
+    color: rgba(255, 255, 255, 0.467);
+}
 /*====================================================================
-Section 4
+Contact Page
 ======================================================================*/
+
+
