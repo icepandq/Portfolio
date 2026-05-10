@@ -268,14 +268,14 @@
   // 3. LANDING PAGE
   // ═══════════════════════════════════════════════════════
 
-  const LANDING_START = 300; // ADJUST: ms to wait before first animation fires
+  const LANDING_START = 900; // ADJUST: ms to wait before first animation fires
 
   const landingEls = [
     { sel: '.txt-box1',   delay: 0   },
     { sel: '.txt-box2',   delay: 120 },
     { sel: '.hi',         delay: 280, glitch: true },
     { sel: '.luis',       delay: 400, glitch: true },
-    { sel: '.web',        delay: 520, glitch: true },
+    { sel: '.web',        delay: 600, fade: true },
     { sel: '.under-text', delay: 640 },
     { sel: '.text-line',  delay: 760 },
     { sel: '.ld-btn',     delay: 880 },
