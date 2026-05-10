@@ -696,6 +696,9 @@ footer{
     width: 100%;
     justify-content: center;
     align-items: center;
+
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
 }
 footer p{
     font-size: 1.7vh;
