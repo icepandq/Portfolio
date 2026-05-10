@@ -448,7 +448,7 @@ Project 1 and PRoject 2 Page
 }
 .box div{
     display: flex;
-    background-color: aqua;
+    background-color: transparent;
     overflow: hidden;
     border-radius: 1vh;
     height: 19vh;
