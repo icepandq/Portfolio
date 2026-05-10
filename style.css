@@ -649,6 +649,14 @@ Project 1 and PRoject 2 Page
 .fifth-txt2 span {
     color: rgba(255, 255, 255, 0.467);
 }
+
+.txt-box1, .txt-box2, .under-text, .text-line, .ld-btn {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+  .hi, .luis, .web {
+    opacity: 0;
+  }
 /*====================================================================
 Contact Page
 ======================================================================*/
