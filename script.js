@@ -264,52 +264,76 @@
     });
   });
 
-  // ═══════════════════════════════════════════════════════
+ // ═══════════════════════════════════════════════════════
   // 3. LANDING PAGE
   // ═══════════════════════════════════════════════════════
 
-  const landingParent = document.querySelector('.landing-page');
-  if (landingParent) {
-    landingParent.style.cssText += 'opacity:0;transform:translateX(-80px);transition:none;';
-    setTimeout(() => {
-      landingParent.style.transition = 'none';
-      landingParent.style.opacity    = '1';
-      landingParent.style.transform  = 'translateX(0)';
-    }, 10);
-  }
+  const LANDING_START = 900; // ADJUST: ms to wait before first animation fires
 
-  [
-    { sel: '.txt-box1',   delay: 0,   fn: 'scan'  },
-    { sel: '.txt-box2',   delay: 120, fn: 'scan'  },
-    { sel: '.hi',         delay: 280, fn: 'glitch' },
-    { sel: '.luis',       delay: 400, fn: 'glitch' },
-    { sel: '.web',        delay: 520, fn: 'glitch' },
-    { sel: '.under-text', delay: 640, fn: 'scan'  },
-    { sel: '.text-line',  delay: 760, fn: 'scan'  },
-    { sel: '.ld-btn',     delay: 880, fn: 'scan'  },
-  ].forEach(({ sel, delay, fn }) => {
+  const landingEls = [
+    { sel: '.txt-box1',   delay: 0   },
+    { sel: '.txt-box2',   delay: 120 },
+    { sel: '.hi',         delay: 280, glitch: true },
+    { sel: '.luis',       delay: 400, glitch: true },
+    { sel: '.web',        delay: 600, fade: true },
+    { sel: '.under-text', delay: 640 },
+    { sel: '.text-line',  delay: 760 },
+    { sel: '.ld-btn',     delay: 880 },
+  ];
+
+  landingEls.forEach(({ sel, delay, glitch }) => {
     const el = document.querySelector(sel);
     if (!el) return;
-    if (fn === 'glitch') {
-      el.style.opacity = '0';
-      glitchReveal(el, delay + 60);
+
+    if (glitch) {
+      setTimeout(() => {
+        let count = 0;
+        const colors = ['#ff0','#ff0','#ff0','#fff'];
+        const t = setInterval(() => {
+          if (count % 2 === 0) {
+            const tx = (Math.random() - 0.5) * 8;
+            const c  = colors[Math.floor(Math.random() * colors.length)];
+            el.style.opacity   = '0.7';
+            el.style.transform = `translateX(${tx}px) skewX(${tx}deg)`;
+            el.style.filter    = `drop-shadow(0 0 6px ${c})`;
+            el.style.color     = c;
+          } else {
+            el.style.opacity   = '0.4';
+            el.style.transform = 'translateX(0)';
+            el.style.filter    = 'none';
+            el.style.color     = '';
+          }
+          count++;
+          if (count >= 10) {
+            clearInterval(t);
+            el.style.opacity   = '1';
+            el.style.transform = 'translateX(0)';
+            el.style.filter    = 'none';
+            el.style.color     = '';
+          }
+        }, 55);
+      }, LANDING_START + 300); // ADJUST: offset by LANDING_START
+
     } else {
-      scanReveal(el, delay + 60);
+      setTimeout(() => {
+        el.style.transition = `opacity 0.1s ease, clip-path 0.9s cubic-bezier(0.22,1,0.36,1)`;
+        el.style.opacity    = '1';
+        el.style.clipPath   = 'inset(0 0% 0 0)';
+        shine(el, 400);
+      }, LANDING_START + delay); // ADJUST: offset by LANDING_START
     }
-    // Restore button hover transition after animation
+
     if (el.classList.contains('ld-btn')) {
       setTimeout(() => {
-      // ADJUST: add/remove properties and durations as needed
-      el.style.transition = `
-      background-color 0.2s ease-in-out,
-      color 0.2s ease-in-out,
-      border-color 0.2s ease-in-out,
-      transform 0.2s ease-in-out
-    `;
-  }, delay + 60 + 900);
-}
+        el.style.transition = `
+          background-color 0.2s ease-in-out,
+          color 0.2s ease-in-out,
+          border-color 0.2s ease-in-out,
+          transform 0.2s ease-in-out
+        `;
+      }, LANDING_START + delay + 900);
+    }
   });
-
   // ═══════════════════════════════════════════════════════
   // 4. SKILLS SECTION
   // ═══════════════════════════════════════════════════════
