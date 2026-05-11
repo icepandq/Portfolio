@@ -721,47 +721,61 @@ footer svg:hover{
 }
 /*=================================================================================*/
 /* ── MOBILE (max 844) ─────────────────────────────────────────── */
-@media (max-width: 896px) {
+@media (max-width: 414px) {
 
   /* ── NAVBAR ── */
   .navbar, .line, .icon, .nav-elements{
     display: none;
   }  
-  
+  #home {
+    margin-left: -3.5vw;
+  }
   /* ── LANDING ── */
   .landing-page { 
-    font-size: 5vh;
+    font-size: 6vh;
     justify-content: center;
     align-items: center;     
     margin-left: 12vw;
-    margin-top: 20vh;
+    margin-top: 34vh;
   }
   .hi{
-    margin-left: -20vw;
+    display: flex;
+    position: absolute;
+    margin-left: -45vw;
+    margin-top: -12vh;
+  }
+  .luis{
+    display: flex;
+    position: absolute;
+    margin-top: -12vh;
+    margin-left: 18vw;
   }
   .under-text {
-    margin-left: 12vw;
-    margin-top: 35vh;
+    margin-left: 21vw;
+    margin-top: 42vh;
     font-size: 1.4vh;
   }
+  .under-text span {
+    color: rgba(255, 255, 255, 0.667);
+  }
   .text-line {
-    margin-left: 12vw;
-    margin-top: 56vh;
+    margin-left: 18vw;
+    margin-top: 45vh;
     width: 70vw;
   }
   .ld-btn {
-    margin-left: 12vw;
-    margin-top: 60vh;
-    padding: 1.5vh 4vw;
+    margin-left: 35vw;
+    margin-top: 50vh;
+    padding: 2vh 8vw;
     font-size: 1.6vh;
   }
   .txt-box1 {
-    height: 5vh; width: 16.5vw;
-    margin-left: 13.5vw; margin-top: 29vh;
+    height: 6vh; width: 25vw;
+    margin-left: 11vw; margin-top: 35vh;
   }
   .txt-box2 {
-    height: 5vh; width: 28vw;
-    margin-left: 31vw; margin-top: 29vh;
+    height: 6vh; width: 56vw;
+    margin-left: 38vw; margin-top: 35vh;
   }
 
   /* ── SKILLS ── */
