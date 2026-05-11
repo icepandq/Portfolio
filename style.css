@@ -8,6 +8,14 @@ html {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.main-wrapper{
+    overflow: hidden;
 }
 body{
     background-color: rgb(25, 25, 25);
@@ -448,7 +456,7 @@ Project 1 and PRoject 2 Page
 }
 .box div{
     display: flex;
-    background-color: transparent;
+    background-color: aqua;
     overflow: hidden;
     border-radius: 1vh;
     height: 19vh;
@@ -721,14 +729,17 @@ footer svg:hover{
 }
 /*=================================================================================*/
 /* ── MOBILE (max 844) ─────────────────────────────────────────── */
-@media (max-width: 414px) {
-
+@media screen and (max-width: 480px) {
+    html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
   /* ── NAVBAR ── */
   .navbar, .line, .icon, .nav-elements{
-    display: none;
+    display:none;
   }  
   #home {
-    margin-left: -3.5vw;
+    margin-left: -2.5vw;
   }
   /* ── LANDING ── */
   .landing-page { 
@@ -833,11 +844,13 @@ footer svg:hover{
     margin-left: 12vw;
     gap: 2vh;
     flex-wrap: wrap;          /* ADJUST: wrap box images on mobile */
-  }
+    margin-top: 92vh;
+}
   .box div {
     height: 14vh;
     width: 24vh;
-    margin-top: 92vh;
+    background-color: aqua;
+    margin-top: 0;
   }
   .view-btn, .view-btn2 {
     margin-left: 12vw;
@@ -851,6 +864,16 @@ footer svg:hover{
   .third-lines { margin-left: 12vw; gap: 20vw; }
 
   /* ── CONTACT ── */
+  #contact{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  footer {
+    margin-top: 1vh;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 0%, #000 100%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 0%, #000 100%, transparent);
+  }
   .contacts span   { font-size: 6vh; text-align: center; }
   .contacts button { font-size: 3vh; padding: 1vh 4vw; }
   footer svg       { width: 3.5vh; }
