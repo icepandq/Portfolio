@@ -719,3 +719,127 @@ footer svg {
 footer svg:hover{
     transform: scale(1.1);
 }
+/*=================================================================================*/
+/* ── MOBILE (max 844) ─────────────────────────────────────────── */
+@media (max-width: 896px) {
+
+  /* ── NAVBAR ── */
+  .navbar, .line, .icon, .nav-elements{
+    display: none;
+  }  
+  
+  /* ── LANDING ── */
+  .landing-page { 
+    font-size: 5vh;
+    justify-content: center;
+    align-items: center;     
+    margin-left: 12vw;
+    margin-top: 20vh;
+  }
+  .hi{
+    margin-left: -20vw;
+  }
+  .under-text {
+    margin-left: 12vw;
+    margin-top: 35vh;
+    font-size: 1.4vh;
+  }
+  .text-line {
+    margin-left: 12vw;
+    margin-top: 56vh;
+    width: 70vw;
+  }
+  .ld-btn {
+    margin-left: 12vw;
+    margin-top: 60vh;
+    padding: 1.5vh 4vw;
+    font-size: 1.6vh;
+  }
+  .txt-box1 {
+    height: 5vh; width: 16.5vw;
+    margin-left: 13.5vw; margin-top: 29vh;
+  }
+  .txt-box2 {
+    height: 5vh; width: 28vw;
+    margin-left: 31vw; margin-top: 29vh;
+  }
+
+  /* ── SKILLS ── */
+  #skills { margin-left: 0; }
+
+  .tools  { font-size: 48px; margin-right: 42vw; margin-bottom: 30vh; }
+  .skills { font-size: 48px; margin-left: 50vw;  margin-bottom: 30vh; }
+
+  .ring1  { height: 35vh; width: 35vh; }
+  .ring2  { height: 55vh; width: 55vh; }
+  .gwapo img { width: 300px; }
+
+  .tech {
+    margin-left: 10vw;
+    margin-top: 72vh;
+    gap: 2vw;
+    flex-wrap: wrap;       /* ADJUST: wrap icons if too many */
+    width: 40vw;
+  }
+  .skls {
+    margin-left: 57vw;
+    margin-top: 72vh;
+    gap: 2vw;
+    flex-wrap: wrap;
+    width: 40vw;
+  }
+  .figma, .vscode, .notion, .github,
+  .ui, .webdev, .pb, .comms {
+    height: 10vh; width: 8vh;
+  }
+
+  .top-label  { margin-left: 60vw; margin-top: 4vh; }
+  .txt-left   { margin-left: 10vw; margin-top: 42vh; font-size: 1.2vh; }
+  .txt-right  { margin-left: 58vw; margin-top: 42vh; font-size: 1.2vh; }
+
+  .explore-btn { margin-left: 10vw; }
+  .arw         { margin-left: 10vw; }
+
+  /* ── PROJECTS ── */
+  .pj-title   { font-size: 6vh; margin-left: 12vw; margin-top: 12vh; }
+  .main-txt   { margin-left: 12vw; margin-top: 46vh; font-size: 1.4vh; }
+  .sec-txt    { margin-left: 12vw; margin-top: 38vh; }
+  .fourth-txt { margin-left: 12vw; font-size: 1.4vh; }
+  .fifth-txt  { margin-left: 12vw; gap: 12vw; font-size: 1.4vh; }
+  .fifth-txt2 { margin-left: 12vw; gap: 5vw;  font-size: 1.4vh; }
+  .third-txt  { margin-left: 12vw; gap: 18vw; font-size: 1.4vh; }
+
+  .large {
+    height: 28vh;
+    width: 80vw;              /* ADJUST: image width on mobile */
+    margin-left: 12vw;
+    margin-top: 60vh;
+  }
+  .box {
+    margin-left: 12vw;
+    gap: 2vh;
+    flex-wrap: wrap;          /* ADJUST: wrap box images on mobile */
+  }
+  .box div {
+    height: 14vh;
+    width: 24vh;
+    margin-top: 92vh;
+  }
+  .view-btn, .view-btn2 {
+    margin-left: 12vw;
+    margin-top: -16vh;        /* ADJUST: button position after wrapped images */
+    padding: 1vh 3vw;
+  }
+  .separator { margin-left: 12vw; width: 76vw; }
+  .Project   { margin-left: 12vw; }
+  .Featured  { margin-left: 32vw; font-size: 1.4vh; }
+  .bullet    { margin-left: 30vw; }
+  .third-lines { margin-left: 12vw; gap: 20vw; }
+
+  /* ── CONTACT ── */
+  .contacts span   { font-size: 6vh; text-align: center; }
+  .contacts button { font-size: 3vh; padding: 1vh 4vw; }
+  footer svg       { width: 3.5vh; }
+}
+
+/* ── SMALL MOBILE (max 480px) ───────────────────────────────────── */
