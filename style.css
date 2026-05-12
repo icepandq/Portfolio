@@ -743,7 +743,7 @@ footer svg:hover{
   }
   /* ── LANDING ── */
   .landing-page { 
-    font-size: 6vh;
+    font-size: 7vh;
     justify-content: center;
     align-items: center;     
     margin-left: 12vw;
@@ -752,7 +752,7 @@ footer svg:hover{
   .hi{
     display: flex;
     position: absolute;
-    margin-left: -45vw;
+    margin-left: -48vw;
     margin-top: -12vh;
   }
   .luis{
@@ -761,8 +761,11 @@ footer svg:hover{
     margin-top: -12vh;
     margin-left: 18vw;
   }
+  .web{
+    margin-left: -1vw;
+  }
   .under-text {
-    margin-left: 21vw;
+    margin-left: 25vw;
     margin-top: 42vh;
     font-size: 1.4vh;
   }
@@ -785,7 +788,7 @@ footer svg:hover{
     margin-left: 11vw; margin-top: 35vh;
   }
   .txt-box2 {
-    height: 6vh; width: 56vw;
+    height: 6vh; width: 57vw;
     margin-left: 38vw; margin-top: 35vh;
   }
 
