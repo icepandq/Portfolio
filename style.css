@@ -734,6 +734,9 @@ footer svg:hover{
     max-width: 100%;
     overflow-x: hidden;
 }
+ section {
+    min-height: 110vh;
+  }
   /* ── NAVBAR ── */
   .navbar, .line, .icon, .nav-elements{
     display:none;
@@ -793,78 +796,130 @@ footer svg:hover{
   }
 
   /* ── SKILLS ── */
-  #skills { margin-left: 0; }
+  #skills { margin-left: -.5vh; }
+  
+  .tools  { 
+    font-size: 90px; 
+    margin-right: 0vw; 
+    margin-bottom: 100vh; 
+  }
+  .skills { 
+    font-size: 90px; 
+    margin-left: 6vw; 
+    margin-top: 100vh;
+    z-index: 10;
+  }
 
-  .tools  { font-size: 48px; margin-right: 42vw; margin-bottom: 30vh; }
-  .skills { font-size: 48px; margin-left: 50vw;  margin-bottom: 30vh; }
-
-  .ring1  { height: 35vh; width: 35vh; }
-  .ring2  { height: 55vh; width: 55vh; }
-  .gwapo img { width: 300px; }
-
+  .ring1  { height: 30vh; width: 30vh; margin-bottom: 10vh;}
+  .ring2  { height: 40vh; width: 40vh; margin-bottom: 10vh;}
+  .gwapo img {
+    margin-bottom: 5vh;
+     width: 360px; 
+    }
+  .cover {
+    margin-top: -57vh;
+    height: 15vh;
+    width: 45vw;
+    background-color: rgb(25, 25, 25);
+  }
   .tech {
-    margin-left: 10vw;
-    margin-top: 72vh;
-    gap: 2vw;
+    margin-top: 14vh;
+    gap: 6vw;
     flex-wrap: wrap;       /* ADJUST: wrap icons if too many */
-    width: 40vw;
+    width: 90vw;
   }
   .skls {
-    margin-left: 57vw;
-    margin-top: 72vh;
-    gap: 2vw;
-    flex-wrap: wrap;
-    width: 40vw;
+    margin-top: 98vh;
+    margin-left: 2vw;
+    gap: 6vw;
+    flex-wrap: wrap;       /* ADJUST: wrap icons if too many */
+    width: 100vw;
+  }
+  
+  .tech svg{
+    margin-top: 1vh;
+     height: auto;
+    width: 5vh;
+  }
+  .skls svg{
+    margin-top: 1vh;
+     height: auto;
+    width: 5vh;
+}
+  .txt-left {
+    font-size: 10px;
+    margin-left: 42vw;
+    margin-top: 6vh;
+  }
+  .txt-left div {
+    margin-left: 0vw;
+    margin-top: -2vh;
+  }
+  .txt-right {
+    font-size: 10px;
+    margin-left: 42vw;
+    margin-top: 89vh;
+  }
+  .txt-right div {
+    margin-left: 0vw;
+    margin-top: -2vh;
   }
   .figma, .vscode, .notion, .github,
   .ui, .webdev, .pb, .comms {
-    height: 10vh; width: 8vh;
+    height: 9vh; width: 9vh;
   }
 
-  .top-label  { margin-left: 60vw; margin-top: 4vh; }
-  .txt-left   { margin-left: 10vw; margin-top: 42vh; font-size: 1.2vh; }
-  .txt-right  { margin-left: 58vw; margin-top: 42vh; font-size: 1.2vh; }
+  .top-label  {
+    display: none;
+  }
 
-  .explore-btn { margin-left: 10vw; }
-  .arw         { margin-left: 10vw; }
+  .explore-btn { display: none; }
+  .arw         { display: none; }
 
   /* ── PROJECTS ── */
-  .pj-title   { font-size: 6vh; margin-left: 12vw; margin-top: 12vh; }
-  .main-txt   { margin-left: 12vw; margin-top: 46vh; font-size: 1.4vh; }
-  .sec-txt    { margin-left: 12vw; margin-top: 38vh; }
-  .fourth-txt { margin-left: 12vw; font-size: 1.4vh; }
-  .fifth-txt  { margin-left: 12vw; gap: 12vw; font-size: 1.4vh; }
-  .fifth-txt2 { margin-left: 12vw; gap: 5vw;  font-size: 1.4vh; }
-  .third-txt  { margin-left: 12vw; gap: 18vw; font-size: 1.4vh; }
-
+  .p1-title   {height: 1vh; width: 100vw; margin-top: 15vh; gap: 5vw;}
+  .pj-title   { font-size: 6vh; margin-left: 12vw; margin-top: 10vh; }
+  .main-txt   { margin-left: 12vw; margin-top: 58vh; font-size: 1.4vh;}
+  .sec-txt    { margin-left: 12vw; margin-top: 53vh; }
+  .fourth-txt { margin-left: 12vw; font-size: 1.4vh; margin-top: 80vh; width: 40vw; }
+  .fifth-txt  { margin-left: 12vw; gap: 19vw; font-size: 1.4vh;margin-top: 97vh; }
+  .fifth-txt2 { margin-left: 12vw; gap: 5vw;  font-size: 1vh; margin-top: 99vh; }
+  .third-txt  { margin-left: 12vw; gap: 18vw; font-size: 1.4vh;margin-top: 76vh; }
+  .Featured{
+    margin-right: 0;
+  }
   .large {
-    height: 28vh;
+    height: 22vh;
     width: 80vw;              /* ADJUST: image width on mobile */
     margin-left: 12vw;
-    margin-top: 60vh;
+    margin-top: 28vh;
   }
   .box {
-    margin-left: 12vw;
+    margin-left: 55vw;
     gap: 2vh;
     flex-wrap: wrap;          /* ADJUST: wrap box images on mobile */
-    margin-top: 92vh;
+    margin-top: 78vh;
+    width: 50vw;
 }
   .box div {
-    height: 14vh;
-    width: 24vh;
-    background-color: aqua;
-    margin-top: 0;
+    height: 13vh;
+    width: 20vh;
+    margin-top: 2vh;
   }
+  .box div:last-child {
+        display: none;
+    }
   .view-btn, .view-btn2 {
     margin-left: 12vw;
-    margin-top: -16vh;        /* ADJUST: button position after wrapped images */
-    padding: 1vh 3vw;
+    margin-top: -43vh;        /* ADJUST: button position after wrapped images */
+    padding: 1vh 4vw;
   }
-  .separator { margin-left: 12vw; width: 76vw; }
+  
+  .separator { margin-left: 12vw; width: 76vw; margin-top: 75vh }
   .Project   { margin-left: 12vw; }
-  .Featured  { margin-left: 32vw; font-size: 1.4vh; }
-  .bullet    { margin-left: 30vw; }
-  .third-lines { margin-left: 12vw; gap: 20vw; }
+  .Featured  { margin-left: 42vw; font-size: 1.8vh; }
+  .bullet    { margin-left: 38vw; margin-top: 53px; }
+  .third-lines { margin-left: 12vw; gap: 34vw; margin-top: 78vh;}
 
   /* ── CONTACT ── */
   #contact{
@@ -873,11 +928,11 @@ footer svg:hover{
     overflow: hidden;
   }
   footer {
-    margin-top: 1vh;
+    margin-top: 10vh;
     -webkit-mask-image: linear-gradient(to right, transparent, #000 0%, #000 100%, transparent);
     mask-image: linear-gradient(to right, transparent, #000 0%, #000 100%, transparent);
   }
-  .contacts span   { font-size: 6vh; text-align: center; }
+  .contacts span   { font-size: 6vh; text-align: center; margin-top: 25vh; }
   .contacts button { font-size: 3vh; padding: 1vh 4vw; }
   footer svg       { width: 3.5vh; }
 }
