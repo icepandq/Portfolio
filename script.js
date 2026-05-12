@@ -923,3 +923,94 @@
   }, { threshold: 0.3 }).observe(contactSection); // ADJUST: scroll trigger (0–1)
 
 })();
+
+// ═══════════════════════════════════════════════════════
+// TOUCH ANIMATIONS — mobile button feedback
+// ═══════════════════════════════════════════════════════
+(function () {
+
+  // Elements to add touch feedback to
+  // ADJUST: add or remove selectors as needed
+  const touchTargets = [
+    '.ld-btn',
+    '.view-btn',
+    '.view-btn2',
+    '.exp-btn',
+    '.contacts button',
+    '.icon',
+  ];
+
+  touchTargets.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+
+      el.addEventListener('touchstart', () => {
+        // ADJUST: scale down amount on press (0.92 = 8% smaller)
+        el.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease, filter 0.1s ease';
+        el.style.transform  = 'scale(0.92)';
+        el.style.filter     = 'brightness(1.3)';
+        // ADJUST: glow color and intensity on press
+        el.style.boxShadow  = '0 0 18px rgba(255,215,0,0.5)';
+      }, { passive: true });
+
+      el.addEventListener('touchend', () => {
+        // ADJUST: spring back easing and duration
+        el.style.transition = 'transform 0.35s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.35s ease, filter 0.35s ease';
+        el.style.transform  = 'scale(1)';
+        el.style.filter     = 'none';
+        el.style.boxShadow  = 'none';
+
+        // Mini gold burst on release
+        touchBurst(el);
+      }, { passive: true });
+
+      el.addEventListener('touchcancel', () => {
+        el.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease';
+        el.style.transform  = 'scale(1)';
+        el.style.filter     = 'none';
+        el.style.boxShadow  = 'none';
+      }, { passive: true });
+
+    });
+  });
+
+  // Small particle burst on touchend
+  // ADJUST: particle count (6), distance, color
+  function touchBurst(el) {
+    const r  = el.getBoundingClientRect();
+    const cx = r.left + r.width  / 2;
+    const cy = r.top  + r.height / 2;
+
+    for (let i = 0; i < 6; i++) { // ADJUST: particle count
+      const dot   = document.createElement('div');
+      const angle = (i / 6) * Math.PI * 2;
+      const dist  = 16 + Math.random() * 14; // ADJUST: burst radius
+      const size  = 2 + Math.random() * 2;   // ADJUST: dot size
+
+      dot.style.cssText = `
+        position: fixed;
+        width: ${size}px;
+        height: ${size}px;
+        border-radius: 50%;
+        background: rgba(255,215,0,0.9);       /* ADJUST: particle color */
+        left: ${cx}px;
+        top: ${cy}px;
+        pointer-events: none;
+        z-index: 9999;
+      `;
+      document.body.appendChild(dot);
+
+      const tx = Math.cos(angle) * dist;
+      const ty = Math.sin(angle) * dist;
+      const s  = performance.now();
+
+      (function step(n) {
+        const p = Math.min((n - s) / 400, 1); // ADJUST: burst duration (ms)
+        const e = 1 - Math.pow(1 - p, 3);
+        dot.style.transform = `translate(${tx * e}px, ${ty * e}px)`;
+        dot.style.opacity   = `${1 - p}`;
+        p < 1 ? requestAnimationFrame(step) : dot.remove();
+      })(performance.now());
+    }
+  }
+
+})();
